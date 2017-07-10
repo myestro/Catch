@@ -23,12 +23,13 @@ namespace Catch {
 
 #if defined ( CATCH_PLATFORM_WINDOWS ) /////////////////////////////////////////
 
+#ifndef NOMINMAX
 #define NOMINMAX
+#endif
+
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #undef WIN32_LEAN_AND_MEAN
-#undef NOMINMAX
-
 
 namespace Catch {
 
